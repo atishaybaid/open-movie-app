@@ -1,13 +1,17 @@
-# A Complete Intro to React
+##   Yarn
+We use yarn because it is determisting just as npm shrink wrap,i.e in whatever  machine you run code
+it runs exactly the same way.
 
-Welcome to a complete intro to React! The site actual workshop material for this repo can be found [here][gh-page]. On the master branch you will find the completed project. On the start branch you will find the barebones boilerplater of the project designed to help you get started.
 
-## Contributing
+#### Angular(or so called mvc) vs React
+Orignally mvc was designed for server which was working wonderfully.
+Then people decided to use this flow on clint side,they created modals views controller seperated.
 
-Please contribute, file issues, and make PRs. More than anything I'm sure there are typos abounding.
+But this was not ideal for clint side so people at facebook desided to use some concepts of  encaputations
+and created component based liberary.
+This proved to be a wonderfull idea,becuse it is easer to maintain as everything is encpsulated insied components,easier to
+reuse.But it comes with a cost of writting more code.
 
-## License
 
-MIT
 
-[gh-page]: http://btholt.github.io/complete-intro-to-react/
+
