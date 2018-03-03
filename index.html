@@ -14,26 +14,7 @@
   <script type="text/javascript" src="node_modules/react/dist/react.js"></script>
   <script type="text/javascript" src="node_modules/react-dom/dist/react-dom.js"></script>
 
-  <script type="text/javascript">
-
-
-
-  const MyTitle = function(){
-    return (
-    React.createElement('div',null,
-      React.createElement('h1',null,'My Second component'))
-      )
-  }
-
-
-    const MyFirstComponent = function(){
-        return  React.createElement('div',null,
-          React.createElement('h1',null,React.createElement(MyTitle),React.createElement(MyTitle),React.createElement(MyTitle)));
-    }
-
-
-    ReactDOM.render(React.createElement(MyFirstComponent),document.getElementById('app'));
-  </script>
+  <script type="text/javascript" src="./js/ClientApp.jsx"></script>
 
 </body>
 </html>

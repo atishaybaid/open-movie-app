@@ -15,3 +15,6 @@ reuse.But it comes with a cost of writting more code.
 
 
 
+
+Tooling
+Prettier:A great Formating tool
