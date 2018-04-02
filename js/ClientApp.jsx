@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
 const LoginForm = props => {
@@ -32,30 +31,31 @@ const FormHOC = Form_Componet => {
   return class extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {
-        data: {}
-      };
-      this.onFieldChange = this.onFieldChange.bind(this);
+      this.state = {};
+      //this.onFieldChange = this.onFieldChange.bind(this);
     }
-    onFieldChange(event, field) {
-      console.log(this);
-      console.log(field);
-      console.log(event.target);
-      /* var tempData = this.state.data;
-      console.log(tempData);
-      tempData[field] = event.target.value;
-      this.setState({ data: tempData });*/
+    onFieldChange = (field, event) => {
+      var target = event.target;
+
+      this.setState(
+        prevState => ({ [field]: target.value }),
+        () => {
+          console.log(this.state);
+        }
+      );
+    };
+    onFormSubmit() {
+      //validation logic
     }
-    onFormSubmit() {}
 
     render() {
-      return (
-        <Form_Componet onFieldChange={this.onFieldChange} onFormSubmit={this.onFormSubmit} data={this.state.data} />
-      );
+      return <Form_Componet onFieldChange={this.onFieldChange} onFormSubmit={this.onFormSubmit} data={this.state} />;
     }
   };
 };
 
 const ConnectedForm = FormHOC(LoginForm);
 
-ReactDOM.render(<ConnectedForm />, document.getElementById("app"));
+export default ConnectedForm;
+
+

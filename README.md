@@ -47,3 +47,19 @@ contents of .babelrc
 
 presets->In babel each kind of transpilation is done by plugin,suchas to convert arrow function to noramal function we need
 a plugin,hence to achive everything we need many plugins. A preset is a collection of plugin.
+
+#### ReactState
+
+1)React Batches the state together if we do setState simultanoiusly,however providing a function in setstate does the job and
+this pattern should also be used for form updation[file:///Users/atishaybaid/work/open-movie-app/index.html]
+
+2)Never assign props to state e.g
+this.state = {
+color: props.initialColor
+};
+
+because this will not change when the props of parent is changing,insteed take the state-up.
+
+#### Fragments->It is usefull when we want to render multiple things from render,prior to version 16.20,if we have to achive same
+
+thing then we would have to wrap elements in some parent div
